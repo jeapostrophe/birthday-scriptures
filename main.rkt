@@ -23,7 +23,7 @@
            (define cs (list->vector (hash-ref b 'chapters)))
            (f cs))]
         ['sections
-         (list->vector (hash-ref fj t))]))
+         (f (list->vector (hash-ref fj t)))]))
     (do!
      (λ (cs)
        (for ([xy (in-list (list (cons m d) #;(cons d m)))])
